@@ -14,31 +14,30 @@
     <div style="display:none">
         <!-- 网易云外链 -->
     </div>
-<audio controls>
-    <source src="music/2.mp3" type="audio/mp3">
+<audio controls autoplay>
+    <source src="music/music1.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
     <!-- 主体内容 -->
     <div class="bgcolor">
         <div style="z-index: 100;" id="dowebok">
+<!-- 播放按钮 -->
+<button onclick="playAudio()" style="position: fixed; bottom: 20px; left: 20px;">播放音乐</button>
             <!-- 第一屏 -->
-            <div class="section">
-                <div class="ly-box01">
-                    <div class="ly-txt01">
-                        <p class="ly-stxt01">Long time no see.</p>
-                        <p class="ly-stxt02">So glad am I that one day you can open this website again.</p>
-                        <p class="ly-stxt03">Although we are still each other, we no longer have the same relationship as before.</p>
-                        <p class="ly-stxt04">What I can say is that I am so sorry!</p>
-	<p class="ly-stxt06">这是洋文,不是乱码</p>
-
-                    </div>
-	<div class="ly-txt02">
-              <!p class="ly-stxt06">这是洋文</p>
-	<!p class="ly-stxt07">不是乱码</p>
-              <!p class="ly-stxt08">(>_<)</p>
-                </div>
-            </div>
- </div>
+<div class="section">
+    <div class="ly-box01">
+        <div class="ly-txt01">
+            <p class="ly-stxt01">Long time no see.</p>
+            <p class="ly-stxt02">So glad am I that one day you can open this website again.</p>
+            <p class="ly-stxt03">Although we are still each other, we no longer have the same relationship as before.</p>
+            <p class="ly-stxt04">What I can say is that I am so sorry!</p>
+            <p class="ly-stxt06">这是洋文,不是乱码</p>
+            
+            <!-- 播放按钮 -->
+            
+        </div>
+    </div>
+</div>
 
             <!-- 第二屏 -->
             <div class="section">
@@ -137,5 +136,12 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery.fullPage.min.js"></script>
     <script src="js/memories.js"></script>
+	<script>
+    var audio = new Audio('music/music1.mp3');  // 创建音频对象
+
+    function playAudio() {
+        audio.play();  // 播放音频
+    }
+</script>
 </body>
 </html>
