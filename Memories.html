@@ -6,18 +6,44 @@
  <title>Happy Birthday</title>
  <link rel="stylesheet" href="css/jquery.fullPage.css">
  <link rel="stylesheet" href="css/memories.css">
+
+<style>
+        /* Add your custom styles here */
+
+        /* Button styles */
+        #musicButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px; /* Adjust padding to control button size */
+            border: none;
+            border-radius: 50%; /* Make it a circle */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Add transition for a smooth effect */
+        }
+	 /* Change button color on hover */
+        #musicButton:hover {
+            background-color: #2980b9;
+        }
+
+        /* Music player styles */
+        audio {
+            display: none; /* Hide the default audio player */
+        }
+    </style>
 </head>
 
 <body>
-  <!-- 背景音乐 -->
-  <div style="display:none">
-    <!-- 网易云外链 -->
-    </div>
-<audio controls autoplay>
-    <source src="music/yequ.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
-  </div>
+   <!-- 背景音乐 -->
+    <button id="musicButton" onclick="toggleMusic()">Music</button>
+    <audio id="bgMusic" controls autoplay>
+        <source src="music/yequ.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
 <div class="bgcolor">
   <div style="z-index:100;" id="dowebok">
       <!--第一屏-->
@@ -197,5 +223,19 @@
 <script src="js/jquery.fullPage.min.js"></script>
 <!-- <script src="js/auto-play.js"></script> -->
 <script src="js/memories.js"></script>
+
+<script>
+        // Add your existing SVG animation scripts here
+
+        // Function to toggle music play/pause
+        function toggleMusic() {
+            var music = document.getElementById('bgMusic');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
 </body>
 </html>

@@ -5,23 +5,48 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Happy Birthday</title>
+    <title>张大美女：生日快乐呀~</title>
     
     <link rel="stylesheet" href="css/cake.css" media="screen" type="text/css"/>
     <link rel="stylesheet" href="css/content.css" />
     <link rel="stylesheet" href="css/bubblefloat.css" />
+<style>
+        /* Add your custom styles here */
+
+        /* Button styles */
+        #musicButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px; /* Adjust padding to control button size */
+            border: none;
+            border-radius: 50%; /* Make it a circle */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Add transition for a smooth effect */
+        }
+	 /* Change button color on hover */
+        #musicButton:hover {
+            background-color: #2980b9;
+        }
+
+        /* Music player styles */
+        audio {
+            display: none; /* Hide the default audio player */
+        }
+    </style>
 </head>
 
 <body>
- <!-- 背景音乐 -->
-  <div style="display:none">
-</div>
-<audio controls autoplay>
-    <source src="music/superise.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
-  </div>
-    
+<!-- 背景音乐 -->
+    <button id="musicButton" onclick="toggleMusic()">Music</button>
+    <audio id="bgMusic" controls autoplay loop>
+        <source src="music/superise.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
 <div class="bg">
     <div class="velas">
         <div class="fuego"></div>
@@ -238,6 +263,19 @@
 <script src="js/bubblefloat.js"></script>
 
 <!<audio src="music/2.mp3" autoplay="true" loop="true"></audio>
+ <script>
+        // Add your existing SVG animation scripts here
+
+        // Function to toggle music play/pause
+        function toggleMusic() {
+            var music = document.getElementById('bgMusic');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
 </body>
 
 </html>
